@@ -59,12 +59,28 @@ export default function Register() {
 
           <div>
               <label for="password" className="block text-sm font-medium text-gray-700">
-                Tu nombre completo
+                Tu nombre
               </label>
               <div className="mt-1">
                 <input 
                   id="name" 
                   name="name" 
+                  type="text" 
+                  required 
+                  onChange={(e) => { handleChange(e) }}
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+              </div>
+            </div>
+
+
+            <div>
+              <label for="password" className="block text-sm font-medium text-gray-700">
+                Tu apellido
+              </label>
+              <div className="mt-1">
+                <input 
+                  id="lastname" 
+                  name="lastname" 
                   type="text" 
                   required 
                   onChange={(e) => { handleChange(e) }}
