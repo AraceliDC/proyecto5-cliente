@@ -9,6 +9,7 @@ const UserState = (props) => {
     const initialState = {
         user: {
             name: null,
+            lastname: null,
             email: null,
         },
         authStatus: false,
