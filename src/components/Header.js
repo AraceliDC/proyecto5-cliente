@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import UserContext from '../context/User/UserContext'
 
@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-white mb-5">
+      <div className="bg-white">
 
         {
           setMobileNavOn ?
@@ -45,8 +45,8 @@ export default function Header() {
                   </div>
 
                   <div className="flow-root" onClick={toggleMobileSidebar}>
-                    <Link to="/catalogo" className="-m-2 p-2 block font-medium text-gray-900">
-                     Catálogo
+                    <Link to="/catalogo">
+                      <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Catálogo</a>
                     </Link>
                   </div>
                 </div>
@@ -57,21 +57,21 @@ export default function Header() {
                     ctxUser.user?.name ?
                       <>
                         <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/perfil" className="-m-2 p-2 block font-medium text-gray-900">
-                            Mi perfil
+                          <Link to="/perfil">
+                            <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Mi perfil</a>
                           </Link>
                         </div>
                       </>
                       :
                       <>
                         <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/iniciar-sesion" className="-m-2 p-2 block font-medium text-gray-900">
-                            Iniciar sesión
+                          <Link to="/iniciar-sesion">
+                            <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Iniciar sesión</a>
                           </Link>
                         </div>
                         <div className="flow-root" onClick={toggleMobileSidebar}>
-                          <Link to="/iniciar-sesion" className="-m-2 p-2 block font-medium text-gray-900">
-                            Crear cuenta
+                          <Link to="/iniciar-sesion">
+                            <a href="#" className="-m-2 p-2 block font-medium text-gray-900">Crear cuenta</a>
                           </Link>
                         </div>
                       </>
@@ -81,9 +81,9 @@ export default function Header() {
 
                 <div className="border-t border-gray-200 py-6 px-4">
                   <div className="-m-2 p-2 flex items-center">
-                    <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/CL.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
+                    <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/US.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
                     <span className="ml-3 block text-base font-medium text-gray-900">
-                    CLP
+                      USD
                     </span>
                   </div>
                 </div>
@@ -108,7 +108,8 @@ export default function Header() {
                 <Link to="/">
                   <div className="ml-4 mr-4 flex lg:ml-0">
 
-                    <img className="h-16 w-auto" src="/Polerapop.png" alt="logo" />
+                    <img className="h-8 w-auto" src={GuitarLogo} alt="Guitar LATAM" />
+                    <span className="font-medium italic mt-1">GUITARWORLD</span>
 
                   </div>
                 </Link>
@@ -120,7 +121,7 @@ export default function Header() {
                     <div className="flex">
                       <div className="relative flex">
                         <Link to="/catalogo" className="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px" aria-expanded="false">
-                          Catálogo
+                          Catálogo de Guitarras
                         </Link>
                       </div>
                     </div>
@@ -131,9 +132,9 @@ export default function Header() {
 
                   <div className="hidden lg:ml-8 lg:flex">
                     <div className="mx-10 text-gray-700 hover:text-gray-800 flex items-center">
-                      <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/CL.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
+                      <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/US.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
                       <span className="ml-3 block text-sm font-medium">
-                        CLP
+                        USD
                       </span>
                     </div>
                   </div>
@@ -143,8 +144,8 @@ export default function Header() {
 
                       <>
                         <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                          <Link to="/perfil" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                            Tu perfil
+                          <Link to="/perfil">
+                            <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Tu perfil</a>
                           </Link>
                           <span className="h-6 w-px bg-gray-200" aria-hidden="true"></span>
                           <a onClick={logoutUser} href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">Cerrar sesión</a>

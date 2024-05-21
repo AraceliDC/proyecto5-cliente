@@ -1,12 +1,7 @@
 import axios from 'axios'
 
 const axiosClient = axios.create({
-    baseURL: process.env.BACKEND_URL
+    baseURL: process.env.REACT_APP_BACKEND_URL
 })
-
-axios.get(process.env.BACKEND_URL)
-  .catch(function (error) {
-    console.log(error);
-  });
 
 export default axiosClient

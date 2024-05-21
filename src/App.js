@@ -24,7 +24,6 @@ import LayoutState from './context/Layout/LayoutState'
 import AuthRoute from './components/Routes/AuthRoute';
 import PrivateRoute from './components/Routes/PrivateRoute'
 import PublicRoute from './components/Routes/PublicRoute';
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom';
 
 
 
@@ -34,7 +33,6 @@ function App() {
     <LayoutState>
       <ProductState>
         <UserState>
-          <BrowserRouter>
           <Router>
             <Header />
 
@@ -60,8 +58,6 @@ function App() {
 
             <Footer />
           </Router>
-          </BrowserRouter>
-          
           </UserState>
         </ProductState>
       </LayoutState>
