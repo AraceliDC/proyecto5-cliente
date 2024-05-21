@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import UserContext from '../context/User/UserContext'
 
-import GuitarLogo from './../assets/guitarlogo.svg'
+import GuitarLogo from './../assets/Polerapop.png'
 
 import LayoutContext from './../context/Layout/LayoutContext'
 import Sidebar from './Sidebar'
@@ -81,9 +81,9 @@ export default function Header() {
 
                 <div className="border-t border-gray-200 py-6 px-4">
                   <div className="-m-2 p-2 flex items-center">
-                    <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/US.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
+                    <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/cl.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
                     <span className="ml-3 block text-base font-medium text-gray-900">
-                      USD
+                      CL
                     </span>
                   </div>
                 </div>
@@ -132,9 +132,9 @@ export default function Header() {
 
                   <div className="hidden lg:ml-8 lg:flex">
                     <div className="mx-10 text-gray-700 hover:text-gray-800 flex items-center">
-                      <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/US.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
+                      <img src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/CL.svg" alt="" className="w-5 h-auto block flex-shrink-0" />
                       <span className="ml-3 block text-sm font-medium">
-                        USD
+                        CL
                       </span>
                     </div>
                   </div>
