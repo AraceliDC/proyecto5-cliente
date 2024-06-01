@@ -35,7 +35,7 @@ export default function Product() {
               {
                   title: res.nombre,
                   quantity: 1,
-                  currency_id: "MXN",
+                  currency_id: "CLP",
                   unit_price: res.precio,
                   picture_url: res.imagen
               }
@@ -124,7 +124,7 @@ const addCheckout = (id) => {
                   <h2 className="text-3xl font-extrabold text-gray-400">Características</h2>
 
                   <p className="text-base text-gray-900 mt-6">
-                    <b>Precio</b>: ${precio} USD
+                    <b>Precio</b>: ${precio} CLP
                   </p>
 
                   <p className="text-base text-gray-900 mb-6">
